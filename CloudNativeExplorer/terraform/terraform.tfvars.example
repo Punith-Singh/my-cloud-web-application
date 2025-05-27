@@ -1,0 +1,13 @@
+# Copy this file to terraform.tfvars and fill in your values
+
+# Path to your Kubernetes config file
+kubeconfig_path = "~/.kube/config"
+
+# Kubernetes namespace for the application
+namespace = "todo-app"
+
+# Domain where your application will be accessible
+app_domain = "my-todo.example.com"
+
+# Database connection URL (keep this secure!)
+database_url = "postgresql://username:password@host:port/database"

@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 11% 98%; /* #FAFAFA */
+  --foreground: 240 10% 11%; /* #1C1B1F */
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 11%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 207 90% 54%; /* #1976D2 */
+  --primary-foreground: 211 100% 99%;
+  --secondary: 60 4.8% 95.9%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 60 4.8% 95.9%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 207 90% 54%;
+  --radius: 0.5rem;
+  
+  /* Custom semantic colors */
+  --surface: 210 11% 98%; /* #FAFAFA */
+  --on-surface: 240 10% 11%; /* #1C1B1F */
+  --surface-variant: 261 7% 92%; /* #E7E0EC */
+  --primary-500: 207 90% 54%; /* #1976D2 */
+  --primary-600: 210 83% 49%; /* #1565C0 */
+  --primary-700: 217 91% 33%; /* #0D47A1 */
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+  
+  /* Custom semantic colors for dark mode */
+  --surface: 240 10% 3.9%;
+  --on-surface: 0 0% 98%;
+  --surface-variant: 240 3.7% 15.9%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .bg-surface {
+    background-color: hsl(var(--surface));
+  }
+  
+  .text-on-surface {
+    color: hsl(var(--on-surface));
+  }
+  
+  .text-primary-500 {
+    color: hsl(var(--primary-500));
+  }
+  
+  .bg-primary-500 {
+    background-color: hsl(var(--primary-500));
+  }
+  
+  .hover\:bg-primary-600:hover {
+    background-color: hsl(var(--primary-600));
+  }
+  
+  .bg-primary-100 {
+    background-color: hsl(207 90% 94%);
+  }
+  
+  .text-primary-700 {
+    color: hsl(var(--primary-700));
+  }
+}
